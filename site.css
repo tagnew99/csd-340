@@ -1,0 +1,35 @@
+/* Tanner Agnew, Module 3.2 Assignment: Github Pages */
+
+#container {
+    background-color: black;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 50px 100px 0 100px;
+}  
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: purple;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    background-color: gold;
+    color: purple; 
+    border: 1px solid red;
+    padding: 10px;
+}
+
+a {
+    color: white; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: purple; 
+}
+
+a:visited {
+    color: red; 
+}
