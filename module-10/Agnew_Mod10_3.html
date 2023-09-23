@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+	CSD 340 Web Development with HTML and CSS
+    </title>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <style>
+        .image-container {
+            width: 400px;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .text-container {
+            text-align: center;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .text-container:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="images/classic.jpg" alt="Image 1" id="mainImage1" onmouseover="changeImage('images/venom.jpg', 'mainImage1')" onmouseout="changeImage('images/classic.jpg', 'mainImage1')" onclick="imageClicked('Image 1 Clicked')">
+        <div class="text-container" id="text1">Run your mouse over the image to change.</div>
+    </div>
+    
+    <br />
+
+    <div class="image-container">
+        <img src="images/anakin.jpg" alt="Image 2" id="mainImage2" onmouseover="changeImage('images/vader.jpg', 'mainImage2')" onmouseout="changeImage('images/anakin.jpg', 'mainImage2')" onclick="imageClicked('Image 2 Clicked')">
+        <div class="text-container" id="text2">Run your mouse over the image to change. <br /> Right-click and select View Source for more details.</div>
+    </div>
+
+    <script>
+        function changeImage(imageFile, elementId) {
+            var mainImage = document.getElementById(elementId);
+            mainImage.src = imageFile;
+        }
+
+        function imageClicked(message) {
+            alert(message);
+        }
+    </script>
+</body>
+</html>
+
+
