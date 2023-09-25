@@ -1,0 +1,64 @@
+/* Agnew_Mod12_2.css */
+
+#container {
+    text-align: center; 
+    padding: 20px; 
+}
+
+    h1 {
+        text-align: center;
+}
+
+    h3 {
+        font-weight: 500;
+}
+
+    ol, ul {
+        font-weight: 300;
+}
+
+
+    .list-container {
+        border: 1px solid red;
+        border-radius: 15px;
+        padding: 10px;
+}
+
+    .different-list-container {
+        border: 1px dashed red;
+        border-radius: 15px;
+        padding: 10px;
+}
+
+.special-heading {
+    font-weight: 500;
+}
+
+    ul {
+	list-style-type: upper-roman;
+	font-weight: 300;
+    }
+
+    .side-by-side {
+        width: 45%;
+        float: left; 
+        margin-right: 5%;
+        box-sizing: border-box;
+        font-weight: 300; 
+}
+
+    .full-width-div {
+        width: 100%;
+        margin-top: 60%;
+        margin-bottom: 20px;
+	float: right;
+}
+
+.landing-page-link {
+    text-decoration: none;
+    float: right;
+}
+
+.landing-page-link:hover {
+    text-decoration: underline;
+}
