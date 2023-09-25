@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSD Web Development with HTML and CSS - Assignment 11.2: JavaScript - Part 3</title>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+	<p>This is my ToDo List. Type your items into the bar and click add. You should receive a notification that your item was added. Click the display button to see your current items and view the current order they are labelled under. Click delete last entry if you wish to remove the most recently entered item.</p>
+    
+    <input type="text" id="entryInput" placeholder="Enter text">
+
+    <button onclick="addEntry()">Add</button>
+    <button onclick="deleteLastEntry()">Delete Last Entry</button>
+    <button onclick="displayEntries()">Display</button>
+
+    <div id="entryContainer"></div>
+
+    <script>
+        // Array to store entries
+        var entriesArray = [];
+
+        // JavaScript function for adding an element to the array
+        function addEntry() {
+            var entryInput = document.getElementById("entryInput");
+            var entryText = entryInput.value;
+
+            if (entryText.trim() !== "") {
+                entriesArray.push(entryText);
+                alert("Added: " + entryText);
+                entryInput.value = "";
+            }
+        }
+
+        // JavaScript function for deleting the last element in the array
+        function deleteLastEntry() {
+            if (entriesArray.length > 0) {
+                var deletedEntry = entriesArray.pop();
+                alert("Deleted: " + deletedEntry);
+            }
+        }
+
+        // JavaScript function for displaying the contents of the array
+        function displayEntries() {
+            var entryContainer = document.getElementById("entryContainer");
+            entryContainer.innerHTML = ""; // Clear the container first
+            
+            for (var i = 0; i < entriesArray.length; i++) {
+                var newEntry = document.createElement("p");
+                newEntry.textContent = (i + 1) + '. ' + entriesArray[i];
+                entryContainer.appendChild(newEntry);
+            }
+        }
+    </script>
+</body>
+</html>
+
